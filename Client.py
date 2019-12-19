@@ -23,7 +23,7 @@ op = input("Entrer votre choix (1 ; 2 ; 3 ou 4): ").encode()
 connexion_avec_serveur.send(op)
 
 connexion_avec_serveur.recv(1).decode()
-connexion_avec_serveur.send ("fin").encode() 
+
 
 print("Fermeture de la connexion")
 connexion_avec_serveur.close()
