@@ -26,7 +26,7 @@ while msg_a_envoyer != b"fin":
 print("Fermeture de la connexion")
 connexion_avec_serveur.close()</code></pre>
 
-* On modifie ensuite le code afin de crée une calculette qui comunique depuis un client avec un serveur. Le code client se charge de tout ce qui est "entrées". 
+* On modifie ensuite le code afin de crée une calculette qui comunique entre un client et un serveur. Le code client se charge de tout ce qui est "entrées". 
 
 On crée deux variables, num1 et num2, et on va demandé à l'utilisateur de rentrer le premier numéro ainsi que le second. 
 Puis on les envoit au serveur (par exemple pour num1 : "connexion_avec_serveur.send(num1)"). 
