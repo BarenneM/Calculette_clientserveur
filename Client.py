@@ -22,7 +22,7 @@ print("4- Division")
 op = input("Entrer votre choix (1 ; 2 ; 3 ou 4): ").encode()
 connexion_avec_serveur.send(op)
 
-connexion_avec_serveur.recv(1).decode()
+print(connexion_avec_serveur.recv(1).decode())
 
 
 print("Fermeture de la connexion")
