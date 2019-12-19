@@ -2,7 +2,7 @@
 
 <h1> Code Client </h1>
 
-* Utilisation d'un code client donné par OpenClassroom dans un second terminal :
+* Utilisation d'un code client donné par OpenClassroom dans un terminal :
 
 <pre><code>import socket
 
@@ -44,7 +44,7 @@ Une fois que le serveur à fait son travail il renvoit un résultat au client et
 
 <h2> Code Serveur </h2>
 
-* Utilisation d'un code serveur donné par OpenClassroom dans un terminal : 
+* Utilisation d'un code serveur donné par OpenClassroom dans un second terminal : 
 
 <pre><code>import socket
 
