@@ -24,6 +24,5 @@ connexion_avec_serveur.send(op)
 
 print(connexion_avec_serveur.recv(1).decode())
 
-
 print("Fermeture de la connexion")
 connexion_avec_serveur.close()
