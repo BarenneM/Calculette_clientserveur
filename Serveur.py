@@ -15,19 +15,20 @@ num2 = float(connexion_avec_client.recv (1).decode())
 op = int(connexion_avec_client.recv (1).decode())
 
 if op == 1 :
-    connexion_avec_client.send(num1 + num2).encode()
+    connexion_avec_client.send(str(num1 + num2).encode())
 
 elif op == 2 :
-    connexion_avec_client.send(num1 - num2).encode()
+    connexion_avec_client.send(str(num1 - num2).encode())
 
 elif op == 3 :
-    connexion_avec_client.send(num1 * num2).encode()
+    connexion_avec_client.send(str(num1 * num2).encode())
 
 elif op == 4 :
-    connexion_avec_client.send(num1 / num2).encode()
+    connexion_avec_client.send(str(num1 / num2).encode())
 
 else :
-    print(connexion_avec_client.send("Donnée erronnée").encode())
+    connexion_avec_client.send("Donnée erronnée".encode())
+
 
 print("Fermeture de la connexion")
 connexion_avec_client.close()
