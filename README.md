@@ -26,9 +26,21 @@ while msg_a_envoyer != b"fin":
 print("Fermeture de la connexion")
 connexion_avec_serveur.close()</code></pre>
 
-On modifie ensuite le code afin de crée une calculette qui comunique depuis un client avec un serveur. Le code client se charge de tout ce qui est "entrées". 
+* On modifie ensuite le code afin de crée une calculette qui comunique depuis un client avec un serveur. Le code client se charge de tout ce qui est "entrées". 
 
+On crée deux variables, num1 et num2, et on va demandé à l'utilisateur de rentrer le premier numéro ainsi que le second. 
+Puis on les envoit au serveur (par exemple pour num1 : "connexion_avec_serveur.send(num1)"). 
 
+Ensuite on lui propose soit d'additionner, soit de soustraires, soit de multiplier, soit de diviser ces deux nombres. 
+Pour cela on lui propose une liste : 
+1. Addition
+2. Soustraction
+3. Multiplication
+4. Division
+
+et on lui demande de faire un choix (1, 2, 3 ou 4) et de le rentrer. On enregistre ce choix sous une variable "op" que l'on envoit au serveur.
+
+Une fois que le serveur à fait son travail il renvoit un résultat au client et ce dernier l'affiche pour qu'il soit visible par l'utilisateur : print(connexion_avec_serveur.recv(1).decode())
 
 <h2> Code Serveur </h2>
 
@@ -58,7 +70,13 @@ print("Fermeture de la connexion")
 connexion_avec_client.close()
 connexion_principale.close()</code></pre>
 
-On modifie ensuite le code afin de créer une calculette qui communique du serveur au client. Le serveur se charge de tout ce qui est calcul. 
+* On modifie ensuite ce code pour l'adapter à notre projet. Le serveur se charge de tout ce qui est calcul. 
+
+Le serveur reçoit les valeurs entrées par l'utilisateur (num1 et num2) qu'on enregistre également sour deux variables du même nom. 
+Le client nous envoit également quel choix d'opération il à fait grâce à la liste donnée, qu'on enregistre également sous une variable "op".
+
+On fait ensuite une suite de condition qui va permettre de choisir la bonne opération et d'effectuer le bon calcul. 
+On envoie le résultat au client. 
 
 
 
