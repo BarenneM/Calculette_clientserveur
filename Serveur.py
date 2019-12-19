@@ -23,7 +23,7 @@ elif op == 2 :
 elif op == 3 :
     connexion_avec_client.send (num1 * num2)
 
-elif op == 4 : 
+elif op == 4 :
     connexion_avec_client.send (num1 / num2)
 
 else :
