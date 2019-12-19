@@ -28,13 +28,6 @@ elif op == 4 :
 
 else :
     connexion_avec_client.send("Donnée erronnée").encode()
-    
-while msg_recu != b"fin":
-    msg_recu = connexion_avec_client.recv(1024)
-    # L'instruction ci-dessous peut lever une exception si le message
-    # Réceptionné comporte des accents
-    print(msg_recu.decode())
-    connexion_avec_client.send(b"5 / 5")
 
 print("Fermeture de la connexion")
 connexion_avec_client.close()
