@@ -10,9 +10,9 @@ print("Le serveur écoute à présent sur le port {}".format(port))
 
 connexion_avec_client, infos_connexion = connexion_principale.accept()
 
-connexion_avec_client.reciv (1)
-connexion_avec_client.reciv (1)
-connexion_avec_client.reciv (1)
+connexion_avec_client.recv (1) = num1
+connexion_avec_client.recv (1) = num2
+connexion_avec_client.recv (1) = op
 
 if op == 1 :
     connexion_avec_client.send (num1 + num2)
